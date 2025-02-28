@@ -1,4 +1,7 @@
 (function() {
+  // Выводим сообщение в консоль сразу после запуска скрипта
+  console.log("Успешный запуск скрипта");
+
   // Переменная для отслеживания состояния скрипта
   let isRunning = false;
   let scriptInterval;
@@ -11,61 +14,71 @@
           button.style.backgroundColor = '#4CAF50';  // Зеленый цвет кнопки
           isRunning = false;
       } else {
-          startScript();  // Запускаем скрипт
+          startScript();  // Запускаем скрипт сразу
           button.textContent = "Остановить скрипт";  // Меняем текст кнопки на "Остановить"
-          button.style.backgroundColor ='#f44336';  // Красный цвет кнопки
+          button.style.backgroundColor = '#f44336';  // Красный цвет кнопки
           isRunning = true;
       }
   }
 
   // Функция для выполнения всех действий
-  function executeTasks() {
+  async function executeTasks() {
       // Открываем сайдбар
       const sidebarButton = document.querySelector('[data-qa-id="sidebar-tasks"]');
       if (sidebarButton && sidebarButton.getAttribute('data-qa-sidebar-tasks-opened') === 'false') {
           sidebarButton.click(); // Открываем сайдбар
       }
 
-      // Ждем, пока сайдбар откроется и кликаем по галочке или по кнопке "Выполнено"
-      setTimeout(() => {
-          const checkbox = document.querySelector('[data-qa-id="hint-mark-success"][data-qa-is-checked="false"]');
-          if (checkbox) {
-              checkbox.click(); // Нажимаем на галочку
-          } else {
-              const doneButton = document.querySelector('button.sc-jtQUzJ.bsYUtO');
-              if (doneButton) {
-                  doneButton.click(); // Нажимаем на кнопку "Выполнено"
-              }
-          }
-
-          setTimeout(() => {
-              const nextStudentButton = document.querySelector('button.sc-jtQUzJ');
-              if (nextStudentButton) {
-                  nextStudentButton.click(); // Нажимаем на кнопку "Следующий ученик"
-              }
-          }, 500); // Пауза 500ms
-      }, 300); // Пауза 300ms
-
-      // Функция для проверки и выполнения действия с последней кнопкой в попапе
-      function clickLastButtonInPopup() {
-          const popup = document.querySelector('.sc-gcfzXs.CYjoi');
-          if (popup) {
-              setTimeout(() => {
-                  const buttons = popup.querySelectorAll('a.sc-grPSDR.ktOTYQ');
-                  const lastButton = buttons[buttons.length - 1];
-                  if (lastButton) {
-                      lastButton.click();
-                  }
-              }, 500); // Пауза 500ms
+      // Кликаем по галочке или кнопке "Выполнено"
+      const checkbox = document.querySelector('[data-qa-id="hint-mark-success"][data-qa-is-checked="false"]');
+      if (checkbox) {
+          checkbox.click(); // Нажимаем на галочку
+      } else {
+          const doneButton = document.querySelector('button.sc-jtQUzJ.bsYUtO');
+          if (doneButton) {
+              doneButton.click(); // Нажимаем на кнопку "Выполнено"
           }
       }
 
+      // Кликаем на кнопку "Следующий ученик"
+      const nextStudentButton = document.querySelector('button.sc-jtQUzJ');
+      if (nextStudentButton) {
+          nextStudentButton.click(); // Нажимаем на кнопку "Следующий ученик"
+      }
+
+      // Функция для клика по первой ссылке в попапе
+      function clickFirstLinkInPopup() {
+          const popup = document.querySelector('.sc-khdDuB.cHiCNl');
+          if (popup) {
+              const firstLink = popup.querySelector('a');
+              if (firstLink) {
+                  firstLink.click(); // Нажимаем на первую ссылку
+              }
+          }
+      }
+
+      // Клик по первой ссылке в попапе
+      clickFirstLinkInPopup();
+
+      // Функция для клика по последней кнопке в попапе
+      function clickLastButtonInPopup() {
+          const popup = document.querySelector('.sc-gcfzXs.CYjoi');
+          if (popup) {
+              const buttons = popup.querySelectorAll('a.sc-grPSDR.ktOTYQ');
+              const lastButton = buttons[buttons.length - 1];
+              if (lastButton) {
+                  lastButton.click();
+              }
+          }
+      }
+
+      // Клик по последней кнопке в попапе
       clickLastButtonInPopup();
   }
 
   // Функция для старта выполнения задач с интервалом
   function startScript() {
-      scriptInterval = setInterval(executeTasks, 1000); // Запуск с интервалом 1 секунда
+      scriptInterval = setInterval(executeTasks, 500); // Уменьшаем интервал до 500ms
   }
 
   // Создаем кнопку для включения/выключения скрипта
@@ -122,5 +135,4 @@
   document.body.appendChild(hideButton);
   document.body.appendChild(button);
   document.body.appendChild(instructionDiv);
-
 })();
