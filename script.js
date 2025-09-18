@@ -30,25 +30,31 @@
       }
 
       // Кликаем по галочке или кнопке "Выполнено"
-      const checkbox = document.querySelector('[data-qa-id="hint-mark-success"][data-qa-is-checked="false"]');
-      if (checkbox) {
-          checkbox.click(); // Нажимаем на галочку
-      } else {
-          const doneButton = document.querySelector('button.sc-jtQUzJ.bsYUtO');
-          if (doneButton) {
-              doneButton.click(); // Нажимаем на кнопку "Выполнено"
-          }
-      }
+// Пробуем найти первую кнопку
+const button1 = document.querySelector('.sc-845wrv-1.kRFQHa.sc-75y806-1.eCyYUA');
+
+if (button1 && !button1.disabled) {
+    button1.click();
+} else {
+    // Если первой нет — пробуем найти вторую
+    const button2 = document.querySelector('.sc-18mjqm9-0.cUYUHy');
+    if (button2 && !button2.disabled) {
+        button2.click();
+    } else {
+        console.log('Кнопка "Выполнено" не найдена или отключена.');
+    }
+}
+
 
       // Кликаем на кнопку "Следующий ученик"
-      const nextStudentButton = document.querySelector('button.sc-jtQUzJ');
+      const nextStudentButton = document.querySelector('.sc-845wrv-1.hVAjTF.sc-1gnrpnh-1.igLLZz');
       if (nextStudentButton) {
           nextStudentButton.click(); // Нажимаем на кнопку "Следующий ученик"
       }
 
       // Функция для клика по первой ссылке в попапе
       function clickFirstLinkInPopup() {
-          const popup = document.querySelector('.sc-khdDuB.cHiCNl');
+          const popup = document.querySelector('.sc-bgysft-4.bGYnTZ');
           if (popup) {
               const firstLink = popup.querySelector('a');
               if (firstLink) {
@@ -62,9 +68,9 @@
 
       // Функция для клика по последней кнопке в попапе
       function clickLastButtonInPopup() {
-          const popup = document.querySelector('.sc-gcfzXs.CYjoi');
+          const popup = document.querySelector('.sc-bgysft-4.bGYnTZ');
           if (popup) {
-              const buttons = popup.querySelectorAll('a.sc-grPSDR.ktOTYQ');
+              const buttons = popup.querySelectorAll('a.sc-bgysft-4.bGYnTZ');
               const lastButton = buttons[buttons.length - 1];
               if (lastButton) {
                   lastButton.click();
@@ -89,7 +95,7 @@
   button.style.left = '150px';  // Размещаем кнопку справа
   button.style.zIndex = 1000;
   button.style.padding = '10px';
-  button.style.backgroundColor = '#f44336';  // Красный цвет по умолчанию
+  button.style.backgroundColor = '#4CAF50';  // Красный цвет по умолчанию
   button.style.color = 'white';
   button.style.border = 'none';
   button.style.cursor = 'pointer';
