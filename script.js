@@ -22,65 +22,62 @@
   }
 
   // Функция для выполнения всех действий
-  async function executeTasks() {
-      // Открываем сайдбар
-      const sidebarButton = document.querySelector('[data-qa-id="sidebar-tasks"]');
-      if (sidebarButton && sidebarButton.getAttribute('data-qa-sidebar-tasks-opened') === 'false') {
-          sidebarButton.click(); // Открываем сайдбар
-      }
+  // Функция для выполнения всех действий
+async function executeTasks() {
+    // Открываем сайдбар
+    const sidebarButton = document.querySelector('[data-qa-id="sidebar-tasks"]');
+    if (sidebarButton && sidebarButton.getAttribute('data-qa-sidebar-tasks-opened') === 'false') {
+        sidebarButton.click(); // Открываем сайдбар
+    }
 
-      // Кликаем по галочке или кнопке "Выполнено"
-// Пробуем найти первую кнопку
-const button1 = document.querySelector('.sc-845wrv-1.kRFQHa.sc-75y806-1.eCyYUA');
-
-if (button1 && !button1.disabled) {
-    button1.click();
-} else {
-    // Если первой нет — пробуем найти вторую
-    const button2 = document.querySelector('.sc-18mjqm9-0.cUYUHy');
-    if (button2 && !button2.disabled) {
-        button2.click();
+    // ✅ Кликаем по галочке проверки задания (data-qa-id="hint-mark-success")
+    const successMark = document.querySelector('[data-qa-id="hint-mark-success"][data-qa-is-checked="false"]');
+    if (successMark) {
+        successMark.click();
+        console.log('✅ Клик по кнопке проверки задания выполнен.');
     } else {
-        console.log('Кнопка "Выполнено" не найдена или отключена.');
+        console.log('❌ Кнопка проверки задания не найдена или уже отмечена.');
+    }
+
+    // Кликаем по галочке или кнопке "Выполнено"
+    const button1 = document.querySelector('.sc-845wrv-1.kRFQHa.sc-75y806-1.eCyYUA');
+    if (button1 && !button1.disabled) {
+        button1.click();
+        console.log('✅ Кнопка "Выполнено" нажата (вариант 1)');
+    } else {
+        const button2 = document.querySelector('.sc-18mjqm9-0.cUYUHy');
+        if (button2 && !button2.disabled) {
+            button2.click();
+            console.log('✅ Кнопка "Выполнено" нажата (вариант 2)');
+        } else {
+            console.log('⚠️ Кнопка "Выполнено" не найдена или отключена.');
+        }
+    }
+
+    // Кликаем на кнопку "Следующий ученик"
+    const nextStudentButton = document.querySelector('.sc-845wrv-1.hVAjTF.sc-1gnrpnh-1.igLLZz');
+    if (nextStudentButton) {
+        nextStudentButton.click();
+        console.log('➡️ Переход к следующему ученику.');
+    }
+
+    // Клик по первой ссылке в попапе
+    const popup = document.querySelector('.sc-bgysft-4.bGYnTZ');
+    if (popup) {
+        const firstLink = popup.querySelector('a');
+        if (firstLink) {
+            firstLink.click();
+            console.log('🔗 Первая ссылка в попапе нажата.');
+        }
+        const buttons = popup.querySelectorAll('a.sc-bgysft-4.bGYnTZ');
+        if (buttons.length > 0) {
+            const lastButton = buttons[buttons.length - 1];
+            lastButton.click();
+            console.log('🔘 Последняя кнопка в попапе нажата.');
+        }
     }
 }
 
-
-      // Кликаем на кнопку "Следующий ученик"
-      const nextStudentButton = document.querySelector('.sc-845wrv-1.hVAjTF.sc-1gnrpnh-1.igLLZz');
-      if (nextStudentButton) {
-          nextStudentButton.click(); // Нажимаем на кнопку "Следующий ученик"
-      }
-
-      // Функция для клика по первой ссылке в попапе
-      function clickFirstLinkInPopup() {
-          const popup = document.querySelector('.sc-bgysft-4.bGYnTZ');
-          if (popup) {
-              const firstLink = popup.querySelector('a');
-              if (firstLink) {
-                  firstLink.click(); // Нажимаем на первую ссылку
-              }
-          }
-      }
-
-      // Клик по первой ссылке в попапе
-      clickFirstLinkInPopup();
-
-      // Функция для клика по последней кнопке в попапе
-      function clickLastButtonInPopup() {
-          const popup = document.querySelector('.sc-bgysft-4.bGYnTZ');
-          if (popup) {
-              const buttons = popup.querySelectorAll('a.sc-bgysft-4.bGYnTZ');
-              const lastButton = buttons[buttons.length - 1];
-              if (lastButton) {
-                  lastButton.click();
-              }
-          }
-      }
-
-      // Клик по последней кнопке в попапе
-      clickLastButtonInPopup();
-  }
 
   // Функция для старта выполнения задач с интервалом
   function startScript() {
@@ -142,3 +139,4 @@ if (button1 && !button1.disabled) {
   document.body.appendChild(button);
   document.body.appendChild(instructionDiv);
 })();
+
