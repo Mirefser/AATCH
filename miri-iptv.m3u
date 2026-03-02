@@ -35,11 +35,11 @@ https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv_1080p.m3u8
 #EXTINF:-1 group-title="Турецкое",Star TV HD
 http://erlyvideo.izone.az:80/starhd/index.m3u8
 #EXTINF:-1 group-title="Турецкое",Kanal D
-https://demiroren-live.daioncdn.net/kanald/kanald_1080p.m3u8
+https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/kanald/kanald_1080p.m3u8
 #EXTINF:-1 group-title="Турецкое",TV8
 http://flussonic.izone.az:80/tv8/index.m3u8
 #EXTINF:-1 group-title="Турецкое",FOX Turkiye
-https://foxtv.blutv.com/blutv_foxtv_live/live.m3u8
+http://116.202.238.88/FOXTV_TR/index.m3u8
 #EXTINF:-1 group-title="Турецкое",CNN Turk
 http://flussonic.izone.az:80/cnnturk/index.m3u8
 #EXTINF:-1 group-title="Турецкое",A Haber
@@ -47,17 +47,15 @@ http://flussonic.izone.az:80/ahaber/index.m3u8
 #EXTINF:-1 group-title="Турецкое",A Spor
 http://flussonic.izone.az:80/aspor/index.m3u8
 #EXTINF:-1 group-title="Турецкое",Sinema TV HD
-http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/290350
-#EXTINF:-1 group-title="Турецкое",Sinema Aksiyon
-http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/290349
-#EXTINF:-1 group-title="Турецкое",Sinema Komedi
-http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/290357
+https://host.onlineradyotv.net:8081/sdmtv/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Турецкое",Kanal 7
-https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8
+https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8
 #EXTINF:-1 group-title="Турецкое",Teve 2
-https://teve2.duhnet.tv/S2/HLS_LIVE/teve2np/track_3_750/playlist.m3u8
+https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/teve2/teve2_1080p.m3u8
 #EXTINF:-1 group-title="Турецкое",TRT Belgesel
 http://flussonic.izone.az:80/trtbelgesel/index.m3u8
+#EXTINF:-1 group-title="Турецкое",TRT Haber
+https://tv-trthaber.medya.trt.com.tr/master_720.m3u8
 
 --- КАТЕГОРИЯ: РУССКОЕ (Федеральные) ---
 #EXTINF:-1 group-title="Русское",Первый канал
