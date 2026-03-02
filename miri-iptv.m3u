@@ -31,7 +31,7 @@ http://flussonic.izone.az:80/trt1/index.m3u8
 #EXTINF:-1 group-title="Турецкое",ATV Turkiye HD
 http://erlyvideo.izone.az:80/atvhd/index.m3u8
 #EXTINF:-1 group-title="Турецкое",Show TV
-http://flussonic.izone.az:80/showtv/index.m3u8
+https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv_1080p.m3u8
 #EXTINF:-1 group-title="Турецкое",Star TV HD
 http://erlyvideo.izone.az:80/starhd/index.m3u8
 #EXTINF:-1 group-title="Турецкое",Kanal D
