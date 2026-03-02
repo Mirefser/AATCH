@@ -1,10 +1,5 @@
 #EXTM3U
-
-# --- НОВЫЙ КАНАЛ ---
-#EXTINF:-1 group-title="Кино;Русское" tvg-logo="https://i.imgur.com/ZMsyjSr.png",viju TV1000
-http://188.225.31.197/bpk-tv/000003747/tve/index.m3u8
-
-# --- АЗЕРБАЙДЖАНСКОЕ ---
+--- КАТЕГОРИЯ: АЗЕРБАЙДЖАНСКОЕ ---
 #EXTINF:-1 group-title="Азербайджанское",AzTV
 http://flussonic.izone.az:80/aztv/index.m3u8
 #EXTINF:-1 group-title="Азербайджанское",Ictimai TV
@@ -23,14 +18,14 @@ http://flussonic.izone.az:80/realtv/index.m3u8
 http://flussonic.izone.az:80/cbc/index.m3u8
 #EXTINF:-1 group-title="Азербайджанское",Medeniyyet TV
 http://flussonic.izone.az:80/medeniyyet/index.m3u8
-#EXTINF:-1 group-title="Азербайджанское;Спорт",Idman Azerbaijan
+#EXTINF:-1 group-title="Азербайджанское",Idman Azerbaijan
 http://flussonic.izone.az:80/idmanaz/index.m3u8
-#EXTINF:-1 group-title="Азербайджанское;Спорт",CBC Sport HD
+#EXTINF:-1 group-title="Азербайджанское",CBC Sport HD
 http://erlyvideo.izone.az:80/cbcsporthd/index.m3u8
-#EXTINF:-1 group-title="Азербайджанское;Музыка",Muz TV
+#EXTINF:-1 group-title="Азербайджанское",Muz TV
 http://flussonic.izone.az:80/muztvaz/index.m3u8
 
-# --- ТУРЕЦКОЕ ---
+--- КАТЕГОРИЯ: ТУРЕЦКОЕ ---
 #EXTINF:-1 group-title="Турецкое",TRT 1 HD
 http://flussonic.izone.az:80/trt1/index.m3u8
 #EXTINF:-1 group-title="Турецкое",ATV Turkiye HD
@@ -51,17 +46,11 @@ http://flussonic.izone.az:80/cnnturk/index.m3u8
 http://flussonic.izone.az:80/ahaber/index.m3u8
 #EXTINF:-1 group-title="Турецкое",A Spor
 http://flussonic.izone.az:80/aspor/index.m3u8
-#EXTINF:-1 group-title="Турецкое;Спорт",Bein Sport 1 HD
-http://146.59.93.251/0422/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Турецкое;Спорт",Bein Sport 2 HD
-http://146.59.93.251/0423/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Турецкое;Спорт",Bein Sport 3 HD
-http://146.59.93.251/0424/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Турецкое;Кино",Sinema TV HD
+#EXTINF:-1 group-title="Турецкое",Sinema TV HD
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/290350
-#EXTINF:-1 group-title="Турецкое;Кино",Sinema Aksiyon
+#EXTINF:-1 group-title="Турецкое",Sinema Aksiyon
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/290349
-#EXTINF:-1 group-title="Турецкое;Кино",Sinema Komedi
+#EXTINF:-1 group-title="Турецкое",Sinema Komedi
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/290357
 #EXTINF:-1 group-title="Турецкое",Kanal 7
 https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8
@@ -70,7 +59,7 @@ https://teve2.duhnet.tv/S2/HLS_LIVE/teve2np/track_3_750/playlist.m3u8
 #EXTINF:-1 group-title="Турецкое",TRT Belgesel
 http://flussonic.izone.az:80/trtbelgesel/index.m3u8
 
-# --- РУССКОЕ (Федеральные) ---
+--- КАТЕГОРИЯ: РУССКОЕ (Федеральные) ---
 #EXTINF:-1 group-title="Русское",Первый канал
 http://flussonic.izone.az:80/perviy/index.m3u8
 #EXTINF:-1 group-title="Русское",Россия 1
@@ -88,7 +77,7 @@ http://flussonic.izone.az:80/5kanal/index.m3u8
 #EXTINF:-1 group-title="Русское",Россия Культура
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/0/kultura-hd/index.m3u8
 
-# --- БЕЛАРУССКОЕ ---
+--- КАТЕГОРИЯ: БЕЛАРУССКОЕ ---
 #EXTINF:-1 group-title="Беларусское",Беларусь 1
 https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus1.smil/playlist.m3u8
 #EXTINF:-1 group-title="Беларусское",Беларусь 2
@@ -104,81 +93,72 @@ https://stream.dc.beltelecom.by/ont/ont/playlist.m3u8
 #EXTINF:-1 group-title="Беларусское",СТВ
 https://ctv.dc.beltelecom.by/ctv/ctv.stream/playlist.m3u8
 
-# --- НОВОСТИ (Добавлены в "Русское") ---
-#EXTINF:-1 group-title="Новости;Русское",Россия 24
+--- КАТЕГОРИЯ: НОВОСТИ ---
+#EXTINF:-1 group-title="Новости",Россия 24
 http://flussonic.izone.az:80/rosiyya24/index.m3u8
-#EXTINF:-1 group-title="Новости;Русское",Известия
+#EXTINF:-1 group-title="Новости",Известия
 http://igi-hls.cdnvideo.ru/igi/igi_tcode/playlist.m3u8
-#EXTINF:-1 group-title="Новости;Русское",Мир 24
+#EXTINF:-1 group-title="Новости",Мир 24
 http://hls.mirtv.cdnvideo.ru/mirtv-parampublish/mir24_2500/playlist.m3u8
-#EXTINF:-1 group-title="Новости;Русское",РБК
+#EXTINF:-1 group-title="Новости",РБК
 http://flussonic.izone.az:80/rbk/index.m3u8
-#EXTINF:-1 group-title="Новости;Русское",Euronews
+#EXTINF:-1 group-title="Новости",Euronews
 http://flussonic.izone.az:80/euronews/mono.m3u8
-#EXTINF:-1 group-title="Новости;Русское",Москва 24
+#EXTINF:-1 group-title="Новости",Москва 24
 https://player.smotrim.ru/iframe/stream/live_id/efab3cbe-a29c-45f0-9596-5cb4f1ce7fbe
-#EXTINF:-1 group-title="Новости;Русское",RTД (Doc)
+#EXTINF:-1 group-title="Новости",RTД (Doc)
 https://cdn-01.bonus-tv.ru/rtdoc/playlist.m3u8
 #EXTINF:-1 group-title="Новости",BBC World News
 http://flussonic.izone.az:80/bbcworld/index.m3u8
 #EXTINF:-1 group-title="Новости",DW Russian
 https://dwamdstream110.akamaized.net/hls/live/2017971/dwstream110/master.m3u8
 
-# --- РАЗВЛЕКАТЕЛЬНОЕ (Русские + Спорт + Док) ---
-#EXTINF:-1 group-title="Развлекательное;Русское",ТНТ
+--- КАТЕГОРИЯ: РАЗВЛЕКАТЕЛЬНОЕ ---
+#EXTINF:-1 group-title="Развлекательное",ТНТ
 http://flussonic.izone.az:80/tnt/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",СТС
-http://flussonic.izone.az:80/ctc/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Пятница!
-http://flussonic.izone.az:80/pyatnicha/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",ТНТ4
-http://flussonic.izone.az:80/tntcomedy/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",ТВ3
+#EXTINF:-1 group-title="Развлекательное",СТС
+http://tbs01-edge17.itdc.ge/ctctv/index.m3u8?token=XlnyVrrSWndthkFt11_QEQhp3F9NV-zCmD2hounnWcnvIFsJ5d_uoF-K1k1ghuTsItca1sQlWvMRwnIqm5txEvtFsy9S_-m2lgNXdxI4WLFFJPfn4dnSJdScfdVUe0lOvNrT5w-_jdtSuP60fjlhhAjEJpWDqVJT1C9GeSvGPn2-0fRGq0XrD_hWq7a4E4x9nsb517SICJNaya48yi3o7htDGUy2dSbt6RXk9RkKqR4XKwudzuXAIX6n0mkIuiXS
+#EXTINF:-1 tvg-logo="https://iptvx.one/picons/piatnica.png" group-title="Развлекательное",Пятница!
+https://cdn4.skygo.mn/live/disk1/Friday/HLSv3-FTA/Friday.m3u8
+#EXTINF:-1 tvg-logo="https://iptvx.one/picons/tnt4.png" group-title="Развлекательное",ТНТ4
+https://bl.rutube.ru/livestream/c801a7087e29a097192d74c270fbc6c1/index.m3u8?s=zhnm9INH7ysOhS2LQStm2A&e=2070623480&scheme=https
+#EXTINF:-1 group-title="Развлекательное",ТВ3
 http://flussonic.izone.az:80/tv3/mono.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Че
-http://flussonic.izone.az:80/ce/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Ю
+#EXTINF:-1 group-title="Развлекательное",Че
+#EXTVLCOPT:http-user-agent=WINK/1.40.1 (AndroidTV/9) HlsWinkPlayer
+http://zabava-htlive.cdn.ngenix.net/hls/CH_PERETZ/variant.m3u8
+#EXTINF:-1 group-title="Развлекательное",Ю
 http://flussonic.izone.az:80/yutv/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Домашний
+#EXTINF:-1 group-title="Развлекательное",Домашний
 http://flussonic.izone.az:80/domashniy/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Discovery Channel
+#EXTINF:-1 group-title="Развлекательное",Discovery Channel
 http://flussonic.izone.az:80/discoverychannel/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",National Geographic
+#EXTINF:-1 group-title="Развлекательное",National Geographic
 http://flussonic.izone.az:80/nationalgeographic/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Animal Planet
+#EXTINF:-1 group-title="Развлекательное",Animal Planet
 http://flussonic.izone.az:80/animalplanet/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",History
+#EXTINF:-1 group-title="Развлекательное",History
 http://flussonic.izone.az:80/history/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",TLC
+#EXTINF:-1 group-title="Развлекательное",TLC
 http://flussonic.izone.az:80/tlc/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Моя Планета
+#EXTINF:-1 group-title="Развлекательное",Моя Планета
 http://flussonic.izone.az:80/moyaplaneta/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Наука 2.0
+#EXTINF:-1 group-title="Развлекательное",Наука 2.0
 http://flussonic.izone.az:80/nauka/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Охота и Рыбалка
+#EXTINF:-1 group-title="Развлекательное",Охота и Рыбалка
 http://flussonic.izone.az:80/oxotoiribalka/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Матч ТВ
+#EXTINF:-1 group-title="Развлекательное",Матч ТВ
 http://flussonic.izone.az:80/matchtv/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Матч! Футбол 1
+#EXTINF:-1 group-title="Развлекательное",Матч! Футбол 1
 http://flussonic.izone.az:80/futbol1/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",Матч! Футбол 2
+#EXTINF:-1 group-title="Развлекательное",Матч! Футбол 2
 http://flussonic.izone.az:80/futbol2/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Русское",EuroSport 1
+#EXTINF:-1 group-title="Развлекательное",EuroSport 1
 http://flussonic.izone.az:80/eurosport/index.m3u8
-#EXTINF:-1 group-title="Развлекательное;Украинское",Квартал ТВ
-http://146.59.93.251/0629/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Развлекательное;Украинское",1+1
-http://146.59.93.251/0630/video.m3u8?token=A9C9619BB9C7
 
-# --- АВТО ---
-#EXTINF:-1 group-title="Авто;Русское",Discovery Turbo Extra
+--- КАТЕГОРИЯ: АВТО ---
+#EXTINF:-1 group-title="Авто",Discovery Turbo Extra
 http://flussonic.izone.az:80/dtx/index.m3u8
-#EXTINF:-1 group-title="Авто;Русское",Авто Плюс
-http://146.59.93.251/0769/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Авто;Русское",Авто 24
-http://146.59.93.251/0842/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Авто;Русское",Драйв
-http://146.59.93.251/0816/video.m3u8?token=A9C9619BB9C7
 #EXTINF:-1 group-title="Авто",Top Gear (ENG)
 https://aegis-cloudfront-1.tubi.video/33ccaca5-a666-4b28-8578-55a9ab9f06d5/playlist.m3u8
 #EXTINF:-1 group-title="Авто",Motor Trend (ENG)
@@ -186,100 +166,88 @@ http://104.255.88.155/motortrend/index.m3u8
 #EXTINF:-1 group-title="Авто",Cars.TV (ENG)
 https://dvrfl04.tulix.tv/teleup-carstv/mpegts
 
-# --- КИНО (Добавлены в "Русское") ---
-#EXTINF:-1 group-title="Кино;Русское",Дом Кино
+--- КАТЕГОРИЯ: КИНО ---
+#EXTINF:-1 group-title="Кино",Дом Кино
 http://flussonic.izone.az:80/domkino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",TV1000
-http://flussonic.izone.az:80/tv1000/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",TV1000 Русское кино
+#EXTINF:-1 group-title="Кино",TV1000
+http://176.118.197.125/viju-TV1000/index.m3u8
+#EXTINF:-1 group-title="Кино",TV1000 Русское кино
 http://flussonic.izone.az:80/tv1000ruskoekino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",TV1000 Action
-http://flussonic.izone.az:80/tv1000action/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",VIP Premiere HD
+#EXTINF:-1 group-title="Кино",TV1000 Action
+http://80.77.52.3/streams/media/tv1000action_720x576/index.m3u8
+#EXTINF:-1 group-title="Кино",VIP Premiere HD
 http://erlyvideo.izone.az/VIPPremiereHD/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",VIP Megahit HD
+#EXTINF:-1 group-title="Кино",VIP Megahit HD
 http://erlyvideo.izone.az/VIPMegahitHD/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",VIP Comedy HD
+#EXTINF:-1 group-title="Кино",VIP Comedy HD
 http://erlyvideo.izone.az/VIPComedyHD/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Кинопремьера HD
+#EXTINF:-1 group-title="Кино",Кинопремьера HD
 http://erlyvideo.izone.az:80/kinopremerahd/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Кинохит
+#EXTINF:-1 group-title="Кино",Кинохит
 http://flussonic.izone.az:80/kinoxit/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Киносемья
+#EXTINF:-1 group-title="Кино",Киносемья
 http://flussonic.izone.az:80/kinosemya/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Киносвидание
+#EXTINF:-1 group-title="Кино",Киносвидание
 http://flussonic.izone.az:80/kinosvidanie/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Мужское кино
+#EXTINF:-1 group-title="Кино",Мужское кино
 http://flussonic.izone.az:80/mkino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Amedia 1
+#EXTINF:-1 group-title="Кино",Amedia 1
 http://flussonic.izone.az:80/amedia1/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Amedia 2
+#EXTINF:-1 group-title="Кино",Amedia 2
 http://flussonic.izone.az:80/amedia2/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Fox HD
+#EXTINF:-1 group-title="Кино",Fox HD
 https://foxtv.blutv.com/blutv_foxtv_live/live.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Еврокино
+#EXTINF:-1 group-title="Кино",Еврокино
 http://flussonic.izone.az:80/eurokino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Русский роман
+#EXTINF:-1 group-title="Кино",Русский роман
 http://flussonic.izone.az:80/russkiyroman/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Русский Бестселлер
+#EXTINF:-1 group-title="Кино",Русский Бестселлер
 http://flussonic.izone.az:80/russkiybetseller/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Родное кино
+#EXTINF:-1 group-title="Кино",Родное кино
 http://flussonic.izone.az:80/rodnoekino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Наше новое кино
+#EXTINF:-1 group-title="Кино",Наше новое кино
 http://flussonic.izone.az:80/nashenovoekino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Любимое кино
+#EXTINF:-1 group-title="Кино",Любимое кино
 http://flussonic.izone.az:80/lubimoekino/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Сити Эдем КиноКлассика
+#EXTINF:-1 group-title="Кино",Сити Эдем КиноКлассика
 https://cityeden.catcast.tv/content/34185/index.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Kino 24
+#EXTINF:-1 group-title="Кино",Kino 24
 http://sirius.greenhosting.ru/Kino24Ru/video.m3u8
-#EXTINF:-1 group-title="Кино;Русское",Дом Кино Премиум HD
-http://146.59.93.251/0126/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Кино;Русское",Кинопремьера HD
-http://146.59.93.251/0167/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Кино;Русское",Viju TV1000 HD
-http://146.59.93.251/0102/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Кино;Русское",Мосфильм
-http://146.59.93.251/0208/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Кино;Русское",Русский детектив
-http://146.59.93.251/0185/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Кино;Русское",Киноужас HD
-http://146.59.93.251/0187/video.m3u8?token=A9C9619BB9C7
 
-# --- ДЕТСКОЕ (Добавлены в "Русское") ---
-#EXTINF:-1 group-title="Детское;Русское",Карусель
+--- КАТЕГОРИЯ: ДЕТСКОЕ ---
+#EXTINF:-1 group-title="Детское",Карусель
 http://flussonic.izone.az:80/karusel/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",Мульт
+#EXTINF:-1 group-title="Детское",Мульт
 http://flussonic.izone.az:80/mult/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",Disney
+#EXTINF:-1 group-title="Детское",Disney
 http://flussonic.izone.az:80/disneyru/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",Nickelodeon
+#EXTINF:-1 group-title="Детское",Nickelodeon
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=535
-#EXTINF:-1 group-title="Детское;Русское",Tiji
+#EXTINF:-1 group-title="Детское",Tiji
 http://flussonic.izone.az:80/tiji/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",Gulli Girl
+#EXTINF:-1 group-title="Детское",Gulli Girl
 http://flussonic.izone.az:80/gulligirl/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",Детский Мир
+#EXTINF:-1 group-title="Детское",Детский Мир
 http://flussonic.izone.az:80/detskiymir/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",JimJam
+#EXTINF:-1 group-title="Детское",JimJam
 http://flussonic.izone.az:80/jimjam/index.m3u8
-#EXTINF:-1 group-title="Детское;Русское",Minika Go
-http://flussonic.izone.az:80/minikago/index.m3u8
-#EXTINF:-1 group-title="Детское;Турецкое",TRT Cocuk
+#EXTINF:-1 group-title="Детское",TRT Cocuk
 http://flussonic.izone.az:80/trtcocuk/index.m3u8
+#EXTINF:-1 group-title="Детское",Minika Go
+http://flussonic.izone.az:80/minikago/index.m3u8
 
-# --- МУЗЫКА (Русские добавлены в "Русское") ---
-#EXTINF:-1 group-title="Музыка;Русское",Музыка Первого
+--- КАТЕГОРИЯ: МУЗЫКА ---
+#EXTINF:-1 group-title="Музыка",Музыка Первого
 http://flussonic.izone.az:80/muzika1/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",МУЗ ТВ
+#EXTINF:-1 group-title="Музыка",МУЗ ТВ
 http://flussonic.izone.az:80/muztv/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",RU.TV
+#EXTINF:-1 group-title="Музыка",RU.TV
 http://flussonic.izone.az:80/rutv/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",Europa Plus TV
+#EXTINF:-1 group-title="Музыка",Europa Plus TV
 http://flussonic.izone.az:80/europaplus/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",Bridge TV
+#EXTINF:-1 group-title="Музыка",Bridge TV
 http://flussonic.izone.az:80/bridgetv/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",MTV Russia
+#EXTINF:-1 group-title="Музыка",MTV Russia
 http://flussonic.izone.az:80/mtvrussia/index.m3u8
 #EXTINF:-1 group-title="Музыка",VH1 Europe
 http://flussonic.izone.az:80/vh1europe/index.m3u8
@@ -289,29 +257,21 @@ http://flussonic.izone.az:80/vh1classic/index.m3u8
 http://flussonic.izone.az:80/mcmtop/index.m3u8
 #EXTINF:-1 group-title="Музыка",Mezzo
 http://flussonic.izone.az:80/mezzo/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",Шансон ТВ
+#EXTINF:-1 group-title="Музыка",Шансон ТВ
 http://flussonic.izone.az:80/shanson/index.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",Ля Минор
+#EXTINF:-1 group-title="Музыка",Ля Минор
 http://flussonic.izone.az:80/lyaminor/index.m3u8
-#EXTINF:-1 group-title="Музыка;Турецкое",Kral Pop
+#EXTINF:-1 group-title="Музыка",Kral Pop
 http://flussonic.izone.az:80/kralpop/index.m3u8
-#EXTINF:-1 group-title="Музыка;Турецкое",Power Turk HD
+#EXTINF:-1 group-title="Музыка",Power Turk HD
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/149580
-#EXTINF:-1 group-title="Музыка;Турецкое",TRT Muzik HD
+#EXTINF:-1 group-title="Музыка",TRT Muzik HD
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/149585
-#EXTINF:-1 group-title="Музыка;Турецкое",TMB
+#EXTINF:-1 group-title="Музыка",TMB
 http://flussonic.izone.az:80/tmb/index.m3u8
-#EXTINF:-1 group-title="Музыка;Турецкое",Dream Turk
+#EXTINF:-1 group-title="Музыка",Dream Turk
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/149581
-#EXTINF:-1 group-title="Музыка;Турецкое",Number One Turk
+#EXTINF:-1 group-title="Музыка",Number One Turk
 http://ctvbakuaz.xyz:8080/orxangence/eyvazusta/369960
 #EXTINF:-1 group-title="Музыка",1Music
 https://eu1.vectromdigital.com:1936/redmusic/redmusic/playlist.m3u8
-#EXTINF:-1 group-title="Музыка;Русское",ТНТ Music
-http://146.59.93.251/0701/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Музыка;Русское",Bridge TV Русский Хит
-http://146.59.93.251/0712/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Музыка",MTV Live HD
-http://146.59.93.251/0710/video.m3u8?token=A9C9619BB9C7
-#EXTINF:-1 group-title="Музыка;Украинское",M1
-http://146.59.93.251/0725/video.m3u8?token=A9C9619BB9C7
