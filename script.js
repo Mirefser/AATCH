@@ -1,142 +1,133 @@
 (function() {
-  // Выводим сообщение в консоль сразу после запуска скрипта
-  console.log("Успешный запуск скрипта");
 
-  // Переменная для отслеживания состояния скрипта
+  console.log("✅ Скрипт загружен");
+
   let isRunning = false;
   let scriptInterval;
 
-  // Функция для включения и выключения скрипта
-  function toggleScript() {
-      if (isRunning) {
-          clearInterval(scriptInterval);  // Останавливаем скрипт
-          button.textContent = "Запустить скрипт";  // Меняем текст кнопки на "Запустить"
-          button.style.backgroundColor = '#4CAF50';  // Зеленый цвет кнопки
-          isRunning = false;
-      } else {
-          startScript();  // Запускаем скрипт сразу
-          button.textContent = "Остановить скрипт";  // Меняем текст кнопки на "Остановить"
-          button.style.backgroundColor = '#f44336';  // Красный цвет кнопки
+  // ===============================
+  // Основная функция выполнения
+  // ===============================
+  async function executeTasks() {
+
+      // 1️⃣ Открываем сайдбар только если закрыт
+      const sidebarToggle = document.querySelector('[data-qa-id="sidebar-tasks-moving-panel"]');
+      const sidebarContent = document.querySelector('[data-qa-id="sidebar-tasks-content"]'); 
+      // замените на реальный селектор контента, если другой
+
+      if (sidebarToggle && sidebarContent && sidebarContent.offsetWidth === 0) {
+          sidebarToggle.dispatchEvent(new MouseEvent('click', {
+              bubbles: true,
+              cancelable: true,
+              view: window
+          }));
+          console.log("📂 Сайдбар открыт");
+          return;
+      }
+
+      // 2️⃣ Галочка проверки
+      const successMark = document.querySelector(
+          '[data-qa-id="hint-mark-success"][data-qa-is-checked="false"]'
+      );
+
+      if (successMark) {
+          successMark.click();
+          console.log("✅ Галочка проверки нажата");
+          return;
+      }
+
+      // 3️⃣ Кнопка "Выполнено"
+      const doneButton = [...document.querySelectorAll('button')]
+          .find(btn => btn.textContent.trim().includes('Выполнено'));
+
+      if (doneButton && !doneButton.disabled) {
+          doneButton.click();
+          console.log("✅ Нажато 'Выполнено'");
+          return;
+      }
+
+      // 4️⃣ Кнопка "Следующий уровень" или "Следующий ученик"
+      const nextButton = [...document.querySelectorAll('button')]
+          .find(btn => {
+              const text = btn.textContent.trim();
+              return text.includes('Следующий уровень') || text.includes('Следующий ученик');
+          });
+
+      if (nextButton && !nextButton.disabled) {
+          nextButton.click();
+          console.log("➡️ Переход дальше");
+          return;
+      }
+
+  }
+
+  // ===============================
+  // Функции управления скриптом
+  // ===============================
+  function startScript() {
+      if (!isRunning) {
+          scriptInterval = setInterval(executeTasks, 800);
           isRunning = true;
+          toggleButton.textContent = "Остановить скрипт";
+          toggleButton.style.backgroundColor = "#f44336";
+          console.log("🚀 Скрипт запущен");
       }
   }
 
-  // Функция для выполнения всех действий
-  // Функция для выполнения всех действий
-async function executeTasks() {
-    // Открываем сайдбар
-    const sidebarButton = document.querySelector('[data-qa-id="sidebar-tasks"]');
-    if (sidebarButton && sidebarButton.getAttribute('data-qa-sidebar-tasks-opened') === 'false') {
-        sidebarButton.click(); // Открываем сайдбар
-    }
-
-    // ✅ Кликаем по галочке проверки задания (data-qa-id="hint-mark-success")
-    const successMark = document.querySelector('[data-qa-id="hint-mark-success"][data-qa-is-checked="false"]');
-    if (successMark) {
-        successMark.click();
-        console.log('✅ Клик по кнопке проверки задания выполнен.');
-    } else {
-        console.log('❌ Кнопка проверки задания не найдена или уже отмечена.');
-    }
-
-    // Кликаем по галочке или кнопке "Выполнено"
-    const button1 = document.querySelector('.sc-845wrv-1.kRFQHa.sc-75y806-1.eCyYUA');
-    if (button1 && !button1.disabled) {
-        button1.click();
-        console.log('✅ Кнопка "Выполнено" нажата (вариант 1)');
-    } else {
-        const button2 = document.querySelector('.sc-18mjqm9-0.cUYUHy');
-        if (button2 && !button2.disabled) {
-            button2.click();
-            console.log('✅ Кнопка "Выполнено" нажата (вариант 2)');
-        } else {
-            console.log('⚠️ Кнопка "Выполнено" не найдена или отключена.');
-        }
-    }
-
-    // Кликаем на кнопку "Следующий ученик"
-    const nextStudentButton = document.querySelector('.sc-845wrv-1.hVAjTF.sc-1gnrpnh-1.igLLZz');
-    if (nextStudentButton) {
-        nextStudentButton.click();
-        console.log('➡️ Переход к следующему ученику.');
-    }
-
-    // Клик по первой ссылке в попапе
-    const popup = document.querySelector('.sc-bgysft-4.bGYnTZ');
-    if (popup) {
-        const firstLink = popup.querySelector('a');
-        if (firstLink) {
-            firstLink.click();
-            console.log('🔗 Первая ссылка в попапе нажата.');
-        }
-        const buttons = popup.querySelectorAll('a.sc-bgysft-4.bGYnTZ');
-        if (buttons.length > 0) {
-            const lastButton = buttons[buttons.length - 1];
-            lastButton.click();
-            console.log('🔘 Последняя кнопка в попапе нажата.');
-        }
-    }
-}
-
-
-  // Функция для старта выполнения задач с интервалом
-  function startScript() {
-      scriptInterval = setInterval(executeTasks, 500); // Уменьшаем интервал до 500ms
+  function stopScript() {
+      if (isRunning) {
+          clearInterval(scriptInterval);
+          isRunning = false;
+          toggleButton.textContent = "Запустить скрипт";
+          toggleButton.style.backgroundColor = "#4CAF50";
+          console.log("⛔ Скрипт остановлен");
+      }
   }
 
-  // Создаем кнопку для включения/выключения скрипта
-  const button = document.createElement('button');
-  button.textContent = "Запустить скрипт";
-  button.style.position = 'absolute';
-  button.style.bottom = '10px';
-  button.style.left = '150px';  // Размещаем кнопку справа
-  button.style.zIndex = 1000;
-  button.style.padding = '10px';
-  button.style.backgroundColor = '#4CAF50';  // Красный цвет по умолчанию
-  button.style.color = 'white';
-  button.style.border = 'none';
-  button.style.cursor = 'pointer';
-  button.style.borderRadius = '5px';
-
-  // Обработчик для кнопки
-  button.addEventListener('click', toggleScript);
-
-  // Создаем инструкцию
-  const instructionDiv = document.createElement('div');
-  instructionDiv.textContent = 'Нажмите на кнопку чтобы начать или остановить скрипт.';
-  instructionDiv.style.position = 'absolute';
-  instructionDiv.style.bottom = '50px';
-  instructionDiv.style.left = '10px';
-  instructionDiv.style.zIndex = 999;
-  instructionDiv.style.backgroundColor = '#fff';
-  instructionDiv.style.padding = '10px';
-  instructionDiv.style.border = '1px solid #ccc';
-
-  // Функция для скрытия/показа кнопки и инструкции
-  function toggleVisibility() {
-      const isVisible = button.style.display !== 'none';
-      button.style.display = isVisible ? 'none' : 'block';
-      instructionDiv.style.display = isVisible ? 'none' : 'block';
+  function toggleScript() {
+      isRunning ? stopScript() : startScript();
   }
 
-  // Добавляем кнопки скрытия/показа
+  // ===============================
+  // Создаем кнопку управления
+  // ===============================
+  const toggleButton = document.createElement('button');
+  toggleButton.textContent = "Запустить скрипт";
+  toggleButton.style.position = 'fixed';
+  toggleButton.style.bottom = '10px';
+  toggleButton.style.left = '150px';
+  toggleButton.style.zIndex = 10000;
+  toggleButton.style.padding = '10px 15px';
+  toggleButton.style.backgroundColor = '#4CAF50';
+  toggleButton.style.color = 'white';
+  toggleButton.style.border = 'none';
+  toggleButton.style.cursor = 'pointer';
+  toggleButton.style.borderRadius = '6px';
+  toggleButton.style.fontWeight = 'bold';
+  toggleButton.addEventListener('click', toggleScript);
+
+  // ===============================
+  // Кнопка скрыть/показать
+  // ===============================
   const hideButton = document.createElement('button');
   hideButton.textContent = 'Скрыть/Показать';
-  hideButton.style.position = 'absolute';
+  hideButton.style.position = 'fixed';
   hideButton.style.bottom = '10px';
-  hideButton.style.left = '10px';  // Размещаем кнопку слева от кнопки запуска
-  hideButton.style.zIndex = 1000;
-  hideButton.style.padding = '10px';
+  hideButton.style.left = '10px';
+  hideButton.style.zIndex = 10000;
+  hideButton.style.padding = '10px 15px';
   hideButton.style.backgroundColor = '#6e6e6e';
   hideButton.style.color = 'white';
   hideButton.style.border = 'none';
   hideButton.style.cursor = 'pointer';
-  hideButton.style.borderRadius = '5px';
-  hideButton.addEventListener('click', toggleVisibility);
+  hideButton.style.borderRadius = '6px';
+  hideButton.addEventListener('click', () => {
+      const isVisible = toggleButton.style.display !== 'none';
+      toggleButton.style.display = isVisible ? 'none' : 'block';
+  });
 
   // Добавляем на страницу
   document.body.appendChild(hideButton);
-  document.body.appendChild(button);
-  document.body.appendChild(instructionDiv);
-})();
+  document.body.appendChild(toggleButton);
 
+})();
