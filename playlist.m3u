@@ -1,0 +1,7 @@
+#EXTM3U
+
+#EXTINF:-1,Normal Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1,Nested M3U Test
+https://mirefser.github.io/AATCH/test-channel.m3u
